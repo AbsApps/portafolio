@@ -1,0 +1,255 @@
+html {
+  /* Esto hace que el scroll sea suave */
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  background-color: #142432;
+}
+
+h1,
+h2,
+p {
+  color: #fff;
+}
+
+.myButton {
+  width: 100%;
+  background-color: #ff705b;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+nav.myNavbar {
+  background-color: rgba(20, 36, 50, 0.298);
+  /* Fondo semitransparente */
+  backdrop-filter: blur(10px);
+  /* Efecto borroso */
+  -webkit-backdrop-filter: blur(10px);
+  /* Soporte para navegadores antiguos */
+}
+
+section#home .sectionContent {
+  height: 100vh;
+}
+
+section#home,
+section#achievements,
+section#portfolio,
+section#certifications {
+  min-height: 500px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+div.container {
+  border: 1px solid gray;
+}
+
+section#achievements {
+  background-color: #0d1923;
+}
+
+section#certifications {
+  min-height: 500px;
+}
+section#certifications div.credential {
+  text-align: center;
+}
+section#certifications div.credential div.image-content {
+  margin: auto;
+  margin-bottom: 10px;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  border-radius: 20%;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+}
+section#certifications div.credential a div {
+  text-transform: uppercase;
+  margin: auto;
+  margin-top: 20px;
+  color: #ff705b;
+  font-size: 12px;
+  width: 140px;
+  height: 30px;
+  box-sizing: border-box;
+  padding: 3px;
+  border: 1px solid #ff705b;
+  border-radius: 20px;
+}
+
+footer {
+  width: 100%;
+  height: 100vh;
+  background-color: #0d1923;
+  border-bottom: 15px solid #ff705b;
+  box-sizing: border-box;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+footer .social-networks {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+footer .social-networks .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* <---- NEW    */
+  width: 45px;
+  height: 45px;
+  border-radius: 25px;
+  border: 1px solid #ff705b;
+  cursor: pointer;
+}
+footer .social-networks .item img {
+  width: 30px;
+  height: 30px;
+}
+
+.hexagono {
+  height: 4em;
+  margin: 3.4641em 0;
+  position: relative;
+  width: 6.9282em;
+}
+.hexagono:before {
+  border-right: 3.4641em solid transparent;
+  border-bottom: 2em solid #ccc;
+  border-left: 3.4641em solid transparent;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -2em;
+  width: 0;
+  overflow: hidden;
+}
+.hexagono:after {
+  border-top: 2em solid #ccc;
+  border-right: 3.4641em solid transparent;
+  border-left: 3.4641em solid transparent;
+  bottom: -2em;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.swiper.cards {
+  width: 400px;
+  height: 520px;
+}
+.swiper.cards .swiper-slide {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.glass-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  /* Fondo semitransparente */
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  /* Efecto borroso */
+  -webkit-backdrop-filter: blur(10px);
+  /* Soporte para navegadores antiguos */
+}
+
+.glass-image-gradient {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 4.2px 8.3px 8.3px hsla(0, 0%, 0%, 0.37);
+}
+
+.glass-image-gradient--img1 {
+  background: url(./../img/appleSwiftShowcase01.jpg);
+}
+
+.glass-image-gradient--img2 {
+  background: url(./../img/appleSwiftShowcase02.jpg);
+}
+
+.glass-image-gradient--img3 {
+  background: url(./../img/MDC01.jpg);
+}
+
+.glass-image-gradient--img4 {
+  background: url(./../img/MDC02.jpg);
+}
+
+.glass-image-gradient--img1,
+.glass-image-gradient--img2,
+.glass-image-gradient--img3,
+.glass-image-gradient--img4 {
+  background-size: cover;
+  background-position: center;
+  /* Fondo semitransparente */
+  backdrop-filter: blur(10px) !important;
+  /* Efecto borroso */
+  -webkit-backdrop-filter: blur(10px) !important;
+  /* Soporte para navegadores antiguos */
+}
+
+.sectionTitle {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #a9d0f2;
+}
+
+.section-text-light {
+  color: #a9d0f2;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  section#certifications div.credential div.image-content {
+    width: 180px;
+    height: 180px;
+  }
+  .swiper.cards {
+    width: 275px;
+    height: 400px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) *//*# sourceMappingURL=style.css.map */
