@@ -4,6 +4,7 @@ $colors: (
     "primary-color": #ff705b,
     "secondary-color": #ff705b,
     "background-color": #142432,
+    "background2-color": #1a2b3b,
     "text-white": #a9d0f2,
     "footer-color": #0a1925
 );
@@ -15,365 +16,384 @@ html {
     scroll-behavior: smooth;
 }
 
-body,
-html {
-    background-color: map-get($colors, "background-color");
-}
+
 
 h1,
-h2,
 p {
-    color: #fff;
+    color: map-get($colors, "text-white") !important;
 }
 
-.myButton {
-    width: 100%;
-    background-color: map-get($colors, "secondary-color");
-    color: #fff;
-    text-align: center;
-    cursor: pointer;
+// main,
+// body,
+// html {
+//     background-color: map-get($colors, "background-color");
+// }
 
-}
+nav#mainNav {
+    background-color: rgba(26, 43, 59, 0.5) !important;
 
-
-nav.myNavbar {
-    // border: 1px solid gray;
-    // background-color: map-get($colors, "background-color");
-    background-color: rgba(20, 36, 50, 0.298);
+    color: #ffff;
     /* Fondo semitransparente */
+    // border-radius: 10px;
     backdrop-filter: blur(10px);
     /* Efecto borroso */
     -webkit-backdrop-filter: blur(10px);
     /* Soporte para navegadores antiguos */
-
-}
-
-section#home {
-    // border: 1px solid red;
-    // min-height: 100vh;
-    .sectionContent {
-        height: 100vh;
-    }
 }
 
 section#home,
 section#achievements,
 section#portfolio,
 section#certifications {
-    min-height: 500px;
-    padding-top: 80px;
-    padding-bottom: 80px;
     // border: 1px solid gray;
-}
-div.container {
-    border: 1px solid gray;
-}
-section#achievements {
-    background-color: #0d1923;
-}
+    background-color: map-get($colors, "background-color");
 
 
+}
 
+//Set padding top & bottom
+section#portfolio,
+section#achievements,
 section#certifications {
-    min-height: 500px;
-    // border: 1px solid cyan;
-
-    div.credential {
-
-        text-align: center;
-
-        div.image-content {
-            margin: auto;
-            margin-bottom: 10px;
-            overflow: hidden;
-            //  border: 1px solid red;
-            width: 250px;
-            height: 250px;
-            border-radius: 20%;
-            overflow: hidden;
-            background-color: #fff;
-
-            border-radius: 50px;
-            cursor: pointer;
-        }
-
-        a {
-
-            div {
-
-                text-transform: uppercase;
-                margin: auto;
-                margin-top: 20px;
-                color: map-get($colors, "secondary-color");
-                font-size: 12px;
-                width: 140px;
-                height: 30px;
-                box-sizing: border-box;
-                padding: 3px;
-                border: 1px solid map-get($colors, "secondary-color");
-                border-radius: 20px;
-            }
-        }
-    }
+    padding-bottom: 80px;
+    padding-top: 80px;
 }
 
 
+section#home {
 
-footer {
-    width: 100%;
-    height: 100vh;
-    background-color: #0d1923;
-    // min-height: 300px;
-    // border: 1px solid gray;
-    border-bottom: 15px solid map-get($colors, "secondary-color");
-    box-sizing: border-box;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    text-align: center;
-
-    .social-networks {
-        margin-top: 20px;
+    div>div.welcome {
         display: flex;
-        justify-content: center;
-        gap: 20px;
-        
-        .item {
+        flex-direction: row;
+        align-items: center;
+
+        height: 100vh;
+        border-color: 1px solid red;
+
+        div {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            /* <---- NEW    */
-
-            // margin-right: 20px;
-            width: 45px;
-            height: 45px;
-            border-radius: 25px;
-            border: 1px solid map-get($colors, "secondary-color");
-            cursor: pointer;
-
-            img {
-                width: 30px;
-                height: 30px;
-            }
+            flex-direction: column;
+            gap: 5px;
         }
     }
 }
 
+section#achievements {
+    display: grid;
+    align-items: center;
+    min-height: 100vh;
+    background-color: map-get($colors, "background2-color");
+    // div#container {
+    //     display: grid;
+    //     align-items: center;
+    // }
+}
+footer {
 
-.hexagono {
-    height: 4em;
-    margin: 3.4641em 0;
-    position: relative;
-    width: 6.9282em;
+    background-color: map-get($colors, "background2-color");
+    border-bottom: 20px solid map-get($colors, "secondary-color");
 
-
-    &:before {
-        border-right: 3.4641em solid transparent;
-        border-bottom: 2em solid #ccc;
-        border-left: 3.4641em solid transparent;
-        content: '';
-        height: 0;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: -2em;
-        width: 0;
-        overflow: hidden;
-    }
-
-    &:after {
-        border-top: 2em solid #ccc;
-        border-right: 3.4641em solid transparent;
-        border-left: 3.4641em solid transparent;
-        bottom: -2em;
-        content: '';
-        height: 0;
-        left: 0;
-        position: absolute;
-        right: 0;
-        width: 0;
-        overflow: hidden;
+    div>div.info {
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 
 
-// Plugins
-.swiper.cards {
-    width: 400px;
-    height: 520px;
+
+.swiper.myCardsPictures {
+    width: 80%;
+    height: 440px;
+    // background-color: black;
 
     .swiper-slide {
         display: flex;
-        align-items: start;
+        align-items: center;
         justify-content: center;
-        border-radius: 18px;
+        border-radius: 18px !important;
         font-size: 22px;
         font-weight: bold;
         color: #fff;
-        //  background-color: gray;
+        box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.1);
+
+        &:nth-child(1n),
+        &:nth-child(2n),
+        &:nth-child(3n),
+        &:nth-child(4n) {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &:nth-child(1n) {
+            background-color: rgb(206, 17, 17);
+            background-image: url(../img/appleSwiftShowcase01.jpg);
+           
+        }
+
+        &:nth-child(2n) {
+            background-color: rgb(0, 140, 255);
+            background-image: url(../img/MDC02.jpg);
+            // background-size: cover;
+            // background-repeat: no-repeat;
+            // background-position: center;
+        }
+
+        &:nth-child(3n) {
+            background-color: rgb(10, 184, 111);
+            background-image: url(../img/appleSwiftShowcase02.jpg);
+            
+            // background-size: cover;
+            // background-repeat: no-repeat;
+            // background-position: center;
+        }
+
+        &:nth-child(4n) {
+            background-color: rgb(211, 122, 7);            
+            background-image: url(../img/MDC01.jpg);
+            // background-size: cover;
+            // background-repeat: no-repeat;
+            // background-position: center;
+        }
+
+        // &:nth-child(5n) {
+        //     background-color: rgb(118, 163, 12);
+        // }
+
+        // &:nth-child(6n) {
+        //     background-color: rgb(180, 10, 47);
+        // }
+
+        // &:nth-child(7n) {
+        //     background-color: rgb(35, 99, 19);
+        // }
+
+        // &:nth-child(8n) {
+        //     background-color: rgb(0, 68, 255);
+        // }
+
+        // &:nth-child(9n) {
+        //     background-color: rgb(218, 12, 218);
+        // }
+
+        // &:nth-child(10n) {
+        //     background-color: rgb(54, 94, 77);
+        // }
+
+    }
+
+}
+
+
+.swiper.myCertifications {
+
+    width: 100%;
+    height: 440px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+
+        article {
+
+            p {
+                font-weight: bold;
+            }
+
+            a {
+                color: map-get($colors, "text-white");
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 12px;
+                cursor: pointer;
+                padding: 10px;
+
+                span {
+
+                    letter-spacing: 1.5px;
+                    padding: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border: 1.5px solid map-get($colors, "primary-color");
+                    background-color: map-get($colors, "background-color");
+                    border-radius: 25px;
+
+                    /* Sombra inicial (sutil o ninguna) */
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+                    /* Transición suave para todos los cambios, especialmente la sombra */
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover {
+
+                        font-weight: bold;
+
+                        background-color: map-get($colors, "background-color");
+                        /* Un poco más oscuro en hover si quieres */
+
+                        /* --- EFECTO LUMINOSO --- */
+                        box-shadow:
+                            0 0 15px rgba(0, 123, 255, 0.8),
+                            /* Sombra azul brillante */
+                            0 0 20px rgba(0, 123, 255, 0.5),
+                            /* Sombra azul más difusa y extendida */
+                            0 0 25px rgba(0, 123, 255, 0.2);
+                        /* Sombra azul aún más difusa */
+                        /* Puedes usar solo una sombra, o múltiples sombras separadas por comas
+                            para un efecto de brillo más complejo y profundo.
+                            Los valores son: offset-x offset-y blur-radius spread-radius color;
+                            Aquí, offset-x e offset-y son 0 para un brillo centrado.
+                            */
+                        transform: translateY(-1px);
+
+
+
+                    }
+                }
+            }
+
+            div.img-content {
+                margin: auto;
+                margin-bottom: 20px;
+                height: 250px;
+                width: 250px;
+                overflow: hidden;
+                border-radius: 35px;
+                position: relative;
+
+                background-color: rgba(217, 217, 217, 0.9) !important;
+
+                color: #ffff;
+                /* Fondo semitransparente */
+                // border-radius: 10px;
+                backdrop-filter: blur(10px);
+                /* Efecto borroso */
+                -webkit-backdrop-filter: blur(10px);
+
+                // bordes con estilo
+                background: linear-gradient(white, white) padding-box,
+                    linear-gradient(to right, #ff705b, darkorchid) border-box;
+                border-radius: 20em;
+                border: 8px solid transparent;
+
+                /* Soporte para navegadores antiguos */
+                img {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+        }
     }
 }
 
 
-// Glass Effect
+
+
+
+// Tools
 .glass-container {
     position: relative;
     width: 300px;
     height: 200px;
-}
 
-.glass {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
-    /* Fondo semitransparente */
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    /* Efecto borroso */
-    -webkit-backdrop-filter: blur(10px);
-    /* Soporte para navegadores antiguos */
-
-
-}
-
-
-
-.glass-image-gradient {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 4.2px 8.3px 8.3px hsl(0deg 0% 0% / 0.37);
-
-}
-
-.glass-image-gradient--img1 {
-    background: url(./../img/appleSwiftShowcase01.jpg);
-}
-
-.glass-image-gradient--img2 {
-    background: url(./../img/appleSwiftShowcase02.jpg);
-}
-
-.glass-image-gradient--img3 {
-    background: url(./../img/MDC01.jpg);
-}
-
-.glass-image-gradient--img4 {
-    background: url(./../img/MDC02.jpg);
-}
-
-.glass-image-gradient--img1,
-.glass-image-gradient--img2,
-.glass-image-gradient--img3,
-.glass-image-gradient--img4 {
-    background-size: cover;
-    background-position: center;
-
-    /* Fondo semitransparente */
-    backdrop-filter: blur(10px) !important;
-    /* Efecto borroso */
-    -webkit-backdrop-filter: blur(10px) !important;
-    /* Soporte para navegadores antiguos */
-
-}
-
-
-// FONTs
-.sectionTitle {
-    font-size: 40px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: map-get($colors, "text-white");
-    ;
-}
-
-.section-text-light {
-    color: map-get($colors, "text-white");
+    div.glass {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        /* Fondo semitransparente */
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        /* Efecto borroso */
+        -webkit-backdrop-filter: blur(10px);
+        /* Soporte para navegadores antiguos */
+    }
 }
 
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
 
-    // ...
-    section#certifications {
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
 
-        div.credential {
 
-            // text-align: center;
-            // border: 2px green solid;`
 
-            div.image-content {
-                width: 180px;
-                height: 180px;
-            }
 
-            // a {
-            //     color: #fff;
-            // }
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+       
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+       
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
+
+
+    /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+          .swiper.myCardsPictures {
+            width: 65%;
+            height: 230px;
+            margin-bottom: 20px;
+            margin-top: 20px;
         }
     }
 
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
 
-    // Plugins
-    .swiper.cards {
-        width: 275px;
-        height: 400px;
-
-        // .swiper-slide {
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-        //     border-radius: 18px;
-        //     font-size: 22px;
-        //     font-weight: bold;
-        //     color: #fff;
-
-        // }
     }
-}
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    // section#certifications {
-
-    //     div.credential {
-
-    //         // text-align: center;
-    //         border: 2px red solid;
-
-    //         div.image-content {
-    //             width: 200px;
-    //             height: 200px;
-    //         }
-
-    //         // a {
-    //         //     color: #fff;
-    //         // }
-    //     }
-    // }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    // ...
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    // ...
-}
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+        
+    }

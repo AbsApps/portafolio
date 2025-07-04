@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <!-- Favicon -->
+    <meta name="theme-color" content="#ff705b" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon_io/site.webmanifest">
+    <title>Christian Rizo Developer</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="myNavbar fixed top-0 left-0 w-full z-50 p-4  ">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl ">Christian Rizo</a>
+
+            <button id="mobile-menu-button" class="text-white md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+
+            <div id="mobile-menu"
+                class="hidden md:flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 w-full md:w-auto">
+
+                <a href="#home" class="block text-white hover:text-gray-200 py-2 md:py-0">Home</a>
+                <a href="#achievements" class="block text-white hover:text-gray-200 py-2 md:py-0">Achievements</a>
+                <a href="#portfolio" class="block text-white hover:text-gray-200 py-2 md:py-0">Portfolio</a>
+                <a href="#certifications" class="block text-white hover:text-gray-200 py-2 md:py-0">Certifications</a>
+
+                <a href="https://github.com/AbsApps" target="_blank"
+                    class="block text-white hover:text-gray-200 py-2 md:py-0">GitHub</a>
+                <!-- <a href="#contact" class="bg-transparent hover:bg-blue-500 border border-blue-500 hover:border-transparent text-white font-bold py-2 px-4 rounded-full">Contact</a> -->
+                <a href="#contact"
+                    class="block inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-xs font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 rounded-full">
+                    <span
+                        class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+                        Contact
+                    </span>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- SECTION Home -->
+        <section id="home">
+            <div class="grid container mx-auto px-4 sectionContent gap-8 md:grid-cols-2 sm:grid-cols-1">
+                <div class="grid content-center gap-10">
+                    <div class="flex flex-col gap-3">
+
+                        <h2 class="sectionTitle">Welcome! <br> I'm Christian.</h2>
+                        <p class="section-text-light">
+                            Software Engineer | 🚀 iOS Developer | Web Developer | Apple-Certified with Swift Associate
+                            and
+                            Swift Certified User | MVVM | Async Await | SQL Server | Supabase
+                        </p>
+                    </div>
+                    <div class="flex gap-4">
+
+                        <a href="https://www.linkedin.com/in/carm94/" target="_blank"
+                            class="block inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-xs font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 rounded-full">
+                            <span
+                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+                                Linkedin
+                            </span>
+                        </a>
+                        <a href="#contact"
+                            class="block inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-xs font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 rounded-full">
+                            <span
+                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+                                Resume
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <!-- <h1>hola 2</h1> -->
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SECTION Achievements -->
+        <section id="achievements">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 content-center">
+                    <div data-aos="fade-right">
+                        <h1 class="sectionTitle pb-5 block lg:hidden">A great achievement <br> I'm incredibly proud of.
+                        </h1>
+                        <!-- Slider main container -->
+                        <div class="swiper cards">
+                            <div class="swiper-wrapper ">
+                                <div class="swiper-slide   glass-image-gradient glass-image-gradient--img1 ">
+                                    <img src="./img/appleSwiftShowcase01.jpg" alt="Apple Swift Showcase MDC">
+                                </div>
+                                <div class="swiper-slide   glass-image-gradient glass-image-gradient--img2 ">
+                                    <img src="./img/appleSwiftShowcase02.jpg" alt="Apple Swift Showcase MDC">
+
+                                </div>
+                                <div class="swiper-slide glass-image-gradient glass-image-gradient--img3">
+                                    <img src="./img/MDC01.jpg" alt="Apple Swift Showcase MDC">
+                                </div>
+                                <div class="swiper-slide glass-image-gradient glass-image-gradient--img4">
+                                    <img src="./img/MDC02.jpg" alt="Apple Swift Showcase MDC">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid content-center" data-aos="fade-right">
+                        <h1 class="sectionTitle pb-5 hidden lg:block">A great achievement <br> I'm incredibly proud of.
+                        </h1>
+                        <p class="pb-4 section-text-light">
+                            Durante mi tiempo como estudiante de inglés en <b>Miami Dade College</b>, noté que muchos de
+                            mis
+                            compañeros y yo enfrentábamos dificultades con la pronunciación del idioma. Motivado por
+                            esta
+                            experiencia, al finalizar el curso de Desarrollo de Aplicaciones iOS, desarrollé una app
+                            enfocada en mejorar el aprendizaje del inglés, especialmente en el área de pronunciación.
+                        </p>
+                        <p class="pb-4 section-text-light">
+                            En enero 2025 presenté esta aplicación en el Apple Swift Student Showcase, organizado por
+                            Miami
+                            Dade College, donde fue seleccionada como la mejor del evento.
+                        </p>
+                        <p class="pb-4 section-text-light">
+                            Como reconocimiento, fui invitado a presentarla en las oficinas de <b>Apple</b>.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION Portfolio -->
+        <section id="portfolio">
+            <div class="container mx-auto px-4">
+                <h1 class="sectionTitle">Portfolio</h1>
+                <p class="section-text-light">
+                    Ready to see what I can build? Explore a selection of my latest apps and projects.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- SECTION Certifications -->
+        <section id="certifications" class="flex flex-col gap-5">
+
+            <div class="container mx-auto px-4">
+                <h1 class="sectionTitle mx-auto">Certifications</h1>
+                <p>
+                    These certifications reflect my commitment to continuous learning and my technical preparation in
+                    software development, especially within the <b>Apple</b> ecosystem and modern programming practices.
+                </p>
+                <div class="flex gap-10 justify-center items-center py-4">
+                    <div class="swiper credentials">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="credential">
+                                    <div class="image-content" title="View Credential" data-aos="zoom-in-down">
+                                        <img src="./img/certifications/AppleAssociate.png"
+                                            alt="App Development with Swift Associate">
+                                    </div>
+
+                                    <h1>App Development with Swift <br>Associate</h1>
+                                    <a target="_blank"
+                                        href="https://www.credly.com/badges/316b1794-7249-4099-a04a-ac5f7f65f3b4/linked_in_profile">
+                                        <div class="grid content-center ">View Credential</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+
+                                <div class="credential">
+                                    <div class="image-content" title="View Credential" data-aos="zoom-in-down">
+                                        <img src="./img/certifications/AppleCertifiedUser.png"
+                                            alt="App Development with Swift Certified User">
+                                    </div>
+
+                                    <h1>App Development with Swift <br>Certified User</h1>
+                                    <a target="_blank"
+                                        href="https://www.credly.com/badges/0536ff8d-91e6-49d6-9428-417336e8981e/public_url">
+                                        <div class="grid content-center ">View Credential</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="credential">
+                                    <div class="image-content" title="View Credential" data-aos="zoom-in-down">
+                                        <img src="./img/certifications/iosUdemy.jpeg"
+                                            alt="iOS and Swift from scratch to professional">
+                                    </div>
+                                    <h1>iOS and Swift from scratch <br>to professional</h1>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="credential">
+                                    <div class="image-content" title="View Credential" data-aos="zoom-in-down">
+                                        <img src="./img/certifications/CloudComputing.png" alt="Google Cloud Computing">
+                                    </div>
+                                    <h1>Google Cloud <br>Computing</h1>
+
+                                    <a target="_blank"
+                                        href="https://skillshop.exceedlms.com/student/award/rfakRcPT6MfDXfAuCH3uBbq1">
+                                        <div class="grid content-center ">View Credential</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="grid content-center">
+        <div class="container mx-auto px-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+            <div class="">
+                <h1 class="sectionTitle">Connect With Me</h1>
+                <p>Find me on social media or drop me a line.</p>
+                <div class="social-networks mx-auto">
+                    <div class="item">
+                        <a href="https://www.linkedin.com/in/carm94/" target="_blank">
+                            <img src="/img/icons/icons8-linkedin-48.png" alt="Christian Rizo linkedin profile">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <img src="/img/icons/icons8-post-48.png" alt="Send mail to Christian ">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
