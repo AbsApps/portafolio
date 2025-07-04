@@ -16,7 +16,9 @@ html {
     scroll-behavior: smooth;
 }
 
-
+// .container {
+//     border: 1px white solid;
+// }
 
 h1,
 p {
@@ -97,6 +99,11 @@ section#achievements {
     }
 }
 
+section#portfolio {
+    height: 100vh;
+}
+
+
 footer {
 
     background-color: map-get($colors, "background2-color");
@@ -132,25 +139,33 @@ footer {
 
 
 .card-app {
+    // border: 1px solid green;
     .header {
+        text-align: left;
         margin-bottom: 25px;
+
         h1 {
             font-weight: bold;
         }
+
         h2 {
             font-weight: normal;
             color: map-get($colors, "text-white") !important;
             opacity: 0.8;
         }
-        h1,h2 {
-          line-height: 15px;
-          font-size: 18px;
+
+        h1,
+        h2 {
+            line-height: 15px;
+            font-size: 18px;
         }
     }
 }
 
 .card-body {
-    width: 370px;
+
+    max-width: 370px;
+    width: 100%;
     height: 250px;
     // border: 1px gray solid;
     background-color: #ffff;
@@ -170,6 +185,8 @@ footer {
     .detail {
         height: 70px;
         padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -177,7 +194,7 @@ footer {
         /* El degradado transparente se extiende hasta el 30% de la altura del div */
         -webkit-mask-image: linear-gradient(to bottom, transparent -10%, rgb(255, 255, 255) 40%);
         mask-image: linear-gradient(to bottom, transparent -10%, rgb(255, 255, 255) 40%);
-        
+
         -webkit-mask-composite: intersect;
         /* Combina las máscaras (para que ambos degradados actúen juntos) */
         mask-composite: intersect;
@@ -194,22 +211,25 @@ footer {
             align-content: center;
             justify-content: center;
             flex-grow: 1;
-      
-            
+
+
             // Icon
             &:nth-child(1n),
-            
+
             // Button
             &:nth-child(3n) {
-                flex-grow: 1; /* default 0 */
+                flex-grow: 1;
+                /* default 0 */
             }
-            
+
             // Title
             &:nth-child(2n) {
-                flex-grow: 2; /* default 0 */                
-                justify-content:flex-start;
+                text-align: left;
+                flex-grow: 2;
+                /* default 0 */
+                justify-content: flex-start;
             }
-            
+
             img {
                 max-width: 30px;
                 border-radius: 10px;
@@ -220,6 +240,7 @@ footer {
             h2 {
                 font-weight: bold;
             }
+
             h2,
             p {
                 font-size: 12px;
@@ -287,51 +308,18 @@ footer {
         &:nth-child(2n) {
             background-color: rgb(0, 140, 255);
             background-image: url(../img/MDC02.jpg);
-            // background-size: cover;
-            // background-repeat: no-repeat;
-            // background-position: center;
         }
 
         &:nth-child(3n) {
             background-color: rgb(10, 184, 111);
             background-image: url(../img/appleSwiftShowcase02.jpg);
-
-            // background-size: cover;
-            // background-repeat: no-repeat;
-            // background-position: center;
         }
 
         &:nth-child(4n) {
             background-color: rgb(211, 122, 7);
             background-image: url(../img/MDC01.jpg);
-            // background-size: cover;
-            // background-repeat: no-repeat;
-            // background-position: center;
+         
         }
-
-        // &:nth-child(5n) {
-        //     background-color: rgb(118, 163, 12);
-        // }
-
-        // &:nth-child(6n) {
-        //     background-color: rgb(180, 10, 47);
-        // }
-
-        // &:nth-child(7n) {
-        //     background-color: rgb(35, 99, 19);
-        // }
-
-        // &:nth-child(8n) {
-        //     background-color: rgb(0, 68, 255);
-        // }
-
-        // &:nth-child(9n) {
-        //     background-color: rgb(218, 12, 218);
-        // }
-
-        // &:nth-child(10n) {
-        //     background-color: rgb(54, 94, 77);
-        // }
 
     }
 }
@@ -448,6 +436,31 @@ footer {
     }
 }
 
+.bannerSwipper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.swiper.myPortfolio {
+    width: 100%;
+ 
+ 
+    .swiper-slide {
+        // border: 1px solid blue;
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+
+    // .swiper-pagination {
+    //     margin-top: 300px;
+    // }
+}
+
 
 
 
@@ -519,6 +532,8 @@ footer {
         margin-bottom: 20px;
         margin-top: 20px;
     }
+
+
 }
 
 /* Extra Small Devices, Phones */

@@ -66,19 +66,19 @@ var myPortfolio = new Swiper(".myPortfolio", {
     breakpoints: {
         340: {
             slidesPerView: 1,
-            spaceBetween: 15,
+            spaceBetween: 10,
         },
         640: {
             slidesPerView: 2,
-            spaceBetween: 8,
+            spaceBetween: 25,
         },
         768: {
             slidesPerView: 2,
-            spaceBetween: 40,
+            spaceBetween: 30,
         },
         1024: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 20,
         },
     },
 });

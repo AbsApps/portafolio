@@ -57,6 +57,10 @@ section#achievements div > .content {
   height: 100vh;
 }
 
+section#portfolio {
+  height: 100vh;
+}
+
 footer {
   background-color: #1a2b3b;
   border-bottom: 20px solid #ff705b;
@@ -84,6 +88,7 @@ footer div > div.info {
 }
 
 .card-app .header {
+  text-align: left;
   margin-bottom: 25px;
 }
 .card-app .header h1 {
@@ -94,13 +99,15 @@ footer div > div.info {
   color: #a9d0f2 !important;
   opacity: 0.8;
 }
-.card-app .header h1, .card-app .header h2 {
+.card-app .header h1,
+.card-app .header h2 {
   line-height: 15px;
   font-size: 18px;
 }
 
 .card-body {
-  width: 370px;
+  max-width: 370px;
+  width: 100%;
   height: 250px;
   background-color: white;
   border-radius: 25px;
@@ -115,6 +122,8 @@ footer div > div.info {
 .card-body .detail {
   height: 70px;
   padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -137,10 +146,13 @@ footer div > div.info {
   flex-grow: 1;
 }
 .card-body .detail div:nth-child(1n), .card-body .detail div:nth-child(3n) {
-  flex-grow: 1; /* default 0 */
+  flex-grow: 1;
+  /* default 0 */
 }
 .card-body .detail div:nth-child(2n) {
-  flex-grow: 2; /* default 0 */
+  text-align: left;
+  flex-grow: 2;
+  /* default 0 */
   justify-content: flex-start;
 }
 .card-body .detail div img {
@@ -294,6 +306,25 @@ footer div > div.info {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+.bannerSwipper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.swiper.myPortfolio {
+  width: 100%;
+}
+.swiper.myPortfolio .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 40px;
 }
 
 .glass-container {
