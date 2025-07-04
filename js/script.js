@@ -31,7 +31,7 @@ var swiper = new Swiper(".myCertifications", {
     breakpoints: {
         340: {
             slidesPerView: 1,
-            spaceBetween: 8,
+            spaceBetween: 15,
         },
         640: {
             slidesPerView: 2,
@@ -47,6 +47,42 @@ var swiper = new Swiper(".myCertifications", {
         },
     },
 });
+
+
+
+
+
+var myPortfolio = new Swiper(".myPortfolio", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
+    breakpoints: {
+        340: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+        },
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 8,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+    },
+});
+
 
 console.log('myCertifications')
 

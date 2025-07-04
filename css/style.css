@@ -18,16 +18,18 @@ nav#mainNav {
   -webkit-backdrop-filter: blur(10px);
   /* Soporte para navegadores antiguos */
 }
+nav#mainNav div > .navbar-brand {
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 section#home,
-section#achievements,
 section#portfolio,
 section#certifications {
   background-color: #142432;
 }
 
 section#portfolio,
-section#achievements,
 section#certifications {
   padding-bottom: 80px;
   padding-top: 80px;
@@ -38,7 +40,6 @@ section#home div > div.welcome {
   flex-direction: row;
   align-items: center;
   height: 100vh;
-  border-color: 1px solid red;
 }
 section#home div > div.welcome div {
   display: flex;
@@ -47,8 +48,13 @@ section#home div > div.welcome div {
 }
 
 section#achievements {
-  min-height: 100vh;
   background-color: #1a2b3b;
+}
+section#achievements div > .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
 }
 
 footer {
@@ -75,6 +81,103 @@ footer div > div.info {
 }
 .social-networks .item a > img {
   width: 60%;
+}
+
+.card-app .header {
+  margin-bottom: 25px;
+}
+.card-app .header h1 {
+  font-weight: bold;
+}
+.card-app .header h2 {
+  font-weight: normal;
+  color: #a9d0f2 !important;
+  opacity: 0.8;
+}
+.card-app .header h1, .card-app .header h2 {
+  line-height: 15px;
+  font-size: 18px;
+}
+
+.card-body {
+  width: 370px;
+  height: 250px;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  display: grid;
+  align-content: end;
+  background-image: url(./../img/MDC01.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.card-body .detail {
+  height: 70px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* El degradado transparente se extiende hasta el 30% de la altura del div */
+  -webkit-mask-image: linear-gradient(to bottom, transparent -10%, rgb(255, 255, 255) 40%);
+  mask-image: linear-gradient(to bottom, transparent -10%, rgb(255, 255, 255) 40%);
+  -webkit-mask-composite: intersect;
+  /* Combina las máscaras (para que ambos degradados actúen juntos) */
+  mask-composite: intersect;
+  /* Standard */
+  /* Fondo semitransparente */
+  backdrop-filter: blur(10px);
+  /* Efecto borroso */
+  -webkit-backdrop-filter: blur(10px);
+}
+.card-body .detail div {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+.card-body .detail div:nth-child(1n), .card-body .detail div:nth-child(3n) {
+  flex-grow: 1; /* default 0 */
+}
+.card-body .detail div:nth-child(2n) {
+  flex-grow: 2; /* default 0 */
+  justify-content: flex-start;
+}
+.card-body .detail div img {
+  max-width: 30px;
+  border-radius: 10px;
+}
+.card-body .detail div h2 {
+  font-weight: bold;
+}
+.card-body .detail div h2,
+.card-body .detail div p {
+  font-size: 12px;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  line-height: 14px;
+}
+.card-body .detail div a {
+  text-decoration: none;
+}
+.card-body .detail div a span {
+  background-color: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+  backdrop-filter: blur(10px);
+  /* Efecto borroso */
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1px solid #fff;
+  color: white;
+  font-size: 10px;
+  padding: 15px;
+  border-radius: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.card-body--img1 {
+  background-image: url(./../img/portfolio/customTrainer/portada.png);
 }
 
 .swiper.myCardsPictures {
