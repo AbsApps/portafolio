@@ -35,6 +35,7 @@ section#certifications {
   padding-top: 80px;
 }
 
+/*SECTION*/
 section#home div > div.welcome {
   display: flex;
   flex-direction: row;
@@ -47,9 +48,9 @@ section#home div > div.welcome div {
   gap: 5px;
 }
 
+/*SECTION*/
 section#achievements {
   background-color: #1a2b3b;
-  padding-bottom: 260px;
 }
 section#achievements div > .content {
   display: flex;
@@ -59,9 +60,10 @@ section#achievements div > .content {
 }
 
 section#portfolio {
+  background-color: #274057;
   height: 100vh;
-  border-top-left-radius: 180px;
-  border-top-right-radius: 180px;
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
   margin-top: -250px;
   box-sizing: border-box;
   padding-top: 100px;
@@ -70,20 +72,6 @@ section#portfolio {
   animation: pulseGradientGlow 6s infinite alternate ease-in-out;
 }
 
-@keyframes pulseGlow {
-  0% {
-    /* Estado inicial: resplandor más sutil */
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.2); /* Una capa más difusa */
-  }
-  50% {
-    /* Punto medio: resplandor más grande e intenso */
-    box-shadow: 0 0 25px rgba(128, 0, 128, 0.9), 0 0 35px rgba(160, 0, 160, 0.6), 0 0 40px rgba(192, 0, 192, 0.3); /* Y una tercera capa para un halo grande */
-  }
-  100% {
-    /* Vuelve al estado inicial para un ciclo continuo */
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.2);
-  }
-}
 @keyframes pulseGradientGlow {
   0% {
     /* Estado inicial: resplandor más sutil con tonos cian */
@@ -100,19 +88,13 @@ section#portfolio {
     box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 45px rgba(0, 220, 220, 0.2); /* Cian más oscuro/difuso */
   }
 }
-@keyframes colorChange {
-  0% {
-    border-top-color: blue;
-  }
-  50% {
-    border-top-color: red;
-  }
-  100% {
-    border-top-color: green;
-  }
+/*SECTION*/
+section#certifications {
+  padding-bottom: 350px;
 }
+
 footer {
-  background-color: #1a2b3b;
+  background-color: #142432;
   border-bottom: 20px solid #ff705b;
 }
 footer div > div.info {
@@ -450,6 +432,10 @@ footer div > div.info {
   section#achievements div > .content div.text {
     margin: auto;
     width: 80%;
+  }
+  section#portfolio {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 180px;
   }
 }
 /* Small Devices, Tablets */

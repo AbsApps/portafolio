@@ -72,7 +72,7 @@ section#certifications {
     padding-top: 80px;
 }
 
-
+/*SECTION*/
 section#home {
 
     div>div.welcome {
@@ -90,11 +90,12 @@ section#home {
     }
 }
 
+/*SECTION*/
 section#achievements {
     // border: 2px solid gray;
     // min-height: 100vh;
     background-color: map-get($colors, "background2-color");
-    padding-bottom: 260px;
+    // padding-bottom: 260px;
 
     div>.content {
         display: flex;
@@ -107,9 +108,11 @@ section#achievements {
 }
 
 section#portfolio {
+    //   background-color: map-get($colors, "background2-color");
+    background-color: #274057;
     height: 100vh;
-    border-top-left-radius: 180px;
-    border-top-right-radius: 180px;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
     margin-top: -250px;
     // box-shadow: -3px -8px 22px -1px colorChange;
     // -webkit-box-shadow: -3px -8px 22px -1px colorChange;
@@ -132,30 +135,6 @@ section#portfolio {
     animation: pulseGradientGlow 6s infinite alternate ease-in-out; 
 
 }
-
-
-
-@keyframes pulseGlow {
-    0% {
-        /* Estado inicial: resplandor más sutil */
-        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), /* Resplandor cian suave */
-                    0 0 20px rgba(0, 255, 255, 0.2); /* Una capa más difusa */
-    }
-
-    50% {
-        /* Punto medio: resplandor más grande e intenso */
-        box-shadow: 0 0 25px rgba(128, 0, 128, 0.9),  /* Resplandor principal brillante */
-                    0 0 35px rgba(160, 0, 160, 0.6), /* Una capa más grande y difusa */
-                    0 0 40px rgba(192, 0, 192, 0.3); /* Y una tercera capa para un halo grande */
-    }
-
-    100% {
-        /* Vuelve al estado inicial para un ciclo continuo */
-        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
-                    0 0 20px rgba(0, 255, 255, 0.2);
-    }
-}
-
 
 @keyframes pulseGradientGlow {
     0% {
@@ -183,26 +162,21 @@ section#portfolio {
     }
 }
 
-
-
-@keyframes colorChange {
-    0% {
-        border-top-color: blue;
-    }
-
-    50% {
-        border-top-color: red;
-    }
-
-    100% {
-        border-top-color: green;
-    }
+/*SECTION*/
+section#certifications  {
+    // border: 1px solid red;
+    padding-bottom: 350px;
 }
+
+
+
+
+
 
 
 footer {
 
-    background-color: map-get($colors, "background2-color");
+    background-color: map-get($colors, "background-color");
     border-bottom: 20px solid map-get($colors, "secondary-color");
 
     div>div.info {
@@ -669,6 +643,13 @@ footer {
 
         }
     }
+
+    section#portfolio { 
+
+        border-top-left-radius: 60px;
+        border-top-right-radius: 180px;
+    }
+
 
 }
 
