@@ -59,10 +59,10 @@ var myPortfolio = new Swiper(".myPortfolio", {
         el: ".swiper-pagination",
         clickable: true,
     },
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 3500,
+    //     disableOnInteraction: false,
+    // },
     breakpoints: {
         340: {
             slidesPerView: 1,
