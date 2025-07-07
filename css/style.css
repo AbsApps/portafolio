@@ -435,7 +435,7 @@ footer div > div.info {
   }
   section#portfolio {
     border-top-left-radius: 60px;
-    border-top-right-radius: 180px;
+    border-top-right-radius: 60px;
   }
 }
 /* Small Devices, Tablets */
