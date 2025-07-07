@@ -18,6 +18,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    // background-color: map-get($colors, "background-color") !important;   
+}
+
 // .container {
 //     border: 1px white solid;
 // }
@@ -90,6 +94,7 @@ section#achievements {
     // border: 2px solid gray;
     // min-height: 100vh;
     background-color: map-get($colors, "background2-color");
+    padding-bottom: 260px;
 
     div>.content {
         display: flex;
@@ -103,8 +108,95 @@ section#achievements {
 
 section#portfolio {
     height: 100vh;
-    border-top-left-radius: 150px;
-    border-top-right-radius: 150px;
+    border-top-left-radius: 180px;
+    border-top-right-radius: 180px;
+    margin-top: -250px;
+    // box-shadow: -3px -8px 22px -1px colorChange;
+    // -webkit-box-shadow: -3px -8px 22px -1px colorChange;
+    // -moz-box-shadow: -3px -8px 22px -1px colorChange;
+    box-sizing: border-box;
+    padding-top: 100px;
+    // border-color: 1px solid blue;
+    // animation: colorChange 2s infinite; /* Aplica la animación */
+
+
+    // transition: border-color 0.5s fade;
+    // border: 2px solid;
+    // animation: colorChange 2s infinite;
+
+    //Shadow
+    transition: border-color 0.5s ease-in-out;
+    // box-shadow: -3px -8px 22px -1px red;
+    transition: shadow 0.5s fade;
+    // animation: pulseGlow 2s infinite;
+    animation: pulseGradientGlow 6s infinite alternate ease-in-out; 
+
+}
+
+
+
+@keyframes pulseGlow {
+    0% {
+        /* Estado inicial: resplandor más sutil */
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), /* Resplandor cian suave */
+                    0 0 20px rgba(0, 255, 255, 0.2); /* Una capa más difusa */
+    }
+
+    50% {
+        /* Punto medio: resplandor más grande e intenso */
+        box-shadow: 0 0 25px rgba(128, 0, 128, 0.9),  /* Resplandor principal brillante */
+                    0 0 35px rgba(160, 0, 160, 0.6), /* Una capa más grande y difusa */
+                    0 0 40px rgba(192, 0, 192, 0.3); /* Y una tercera capa para un halo grande */
+    }
+
+    100% {
+        /* Vuelve al estado inicial para un ciclo continuo */
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
+                    0 0 20px rgba(0, 255, 255, 0.2);
+    }
+}
+
+
+@keyframes pulseGradientGlow {
+    0% {
+        /* Estado inicial: resplandor más sutil con tonos cian */
+        box-shadow: 
+            0 0 25px rgba(0, 255, 255, 0.5),   /* Cian medio (base) */
+            0 0 45px rgba(0, 220, 220, 0.2);   /* Cian más oscuro/difuso */
+    }
+
+    50% {
+        /* Punto medio: resplandor más grande e intenso con tonos púrpura */
+        box-shadow: 
+            0 0 25px rgba(128, 0, 128, 0.9),   /* Púrpura principal brillante */
+            0 0 45px rgba(160, 0, 160, 0.6),   /* Púrpura más grande y difuso */
+            0 0 60px rgba(192, 0, 192, 0.3);   /* Púrpura para un halo extendido */
+    }
+
+    100% {
+        /* Vuelve al estado inicial, pero con una transición de color suave */
+        /* Combinación de cian y púrpura para el retorno gradual */
+          /* Vuelve al estado inicial para un ciclo continuo */
+        box-shadow: 
+            0 0 25px rgba(0, 255, 255, 0.5),   /* Cian medio (base) */
+            0 0 45px rgba(0, 220, 220, 0.2);   /* Cian más oscuro/difuso */
+    }
+}
+
+
+
+@keyframes colorChange {
+    0% {
+        border-top-color: blue;
+    }
+
+    50% {
+        border-top-color: red;
+    }
+
+    100% {
+        border-top-color: green;
+    }
 }
 
 
@@ -557,25 +649,26 @@ footer {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-        section#achievements {
-            padding-top: 80px;
-            padding-bottom: 80px;
-            div>.content {
-                
-                height: auto;
+    section#achievements {
+        padding-top: 80px;
+        padding-bottom: 80px;
 
-                .swiper.myCardsPictures {
-                    margin-bottom: 30px;
-                    margin-top: 30px;
-                }
+        div>.content {
 
-                div.text {
-                    margin: auto;
-                    width: 80%;
-                }
+            height: auto;
 
+            .swiper.myCardsPictures {
+                margin-bottom: 30px;
+                margin-top: 30px;
             }
+
+            div.text {
+                margin: auto;
+                width: 80%;
+            }
+
         }
+    }
 
 }
 

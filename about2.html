@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Animación de Borde con Cambio de Color</title>
+<style>
+div {
+  width: 100px;
+  height: 100px;
+  border: 2px solid;
+  transition: border-color 0.5s ease-in-out;
+  margin: 20px;
+}
+
+div:hover {
+  border-color: red;
+}
+
+.animado {
+  border: 2px solid blue;
+  animation: colorChange 2s infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    border-color: blue;
+  }
+  50% {
+    border-color: red;
+  }
+  100% {
+    border-color: green;
+  }
+}
+</style>
+</head>
+<body>
+
+<div>Este div cambia de color al pasar el ratón</div>
+<div class="animado">Este div cambia de color continuamente</div>
+
+</body>
+</html>
