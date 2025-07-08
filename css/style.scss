@@ -514,11 +514,11 @@ footer {
                 /* Efecto borroso */
                 -webkit-backdrop-filter: blur(10px);
 
-                // bordes con estilo
-                background: linear-gradient(white, white) padding-box,
-                    linear-gradient(to right, #ff705b, darkorchid) border-box;
-                border-radius: 20em;
-                border: 8px solid transparent;
+                // // bordes con estilo
+                // background: linear-gradient(white, white) padding-box,
+                //     linear-gradient(to right, #ff705b, darkorchid) border-box;
+                // border-radius: 20em;
+                // border: 8px solid transparent;
 
                 /* Soporte para navegadores antiguos */
                 img {
@@ -586,6 +586,7 @@ footer {
         /* Soporte para navegadores antiguos */
     }
 }
+
 
 
 

@@ -351,9 +351,6 @@ footer div > div.info {
   backdrop-filter: blur(10px);
   /* Efecto borroso */
   -webkit-backdrop-filter: blur(10px);
-  background: linear-gradient(white, white) padding-box, linear-gradient(to right, #ff705b, darkorchid) border-box;
-  border-radius: 20em;
-  border: 8px solid transparent;
   /* Soporte para navegadores antiguos */
 }
 .swiper.myCertifications .swiper-slide article div.img-content img {
