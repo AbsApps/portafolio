@@ -26,14 +26,16 @@ nav#mainNav div > .navbar-brand {
 nav#mainNav .container {
   padding-top: 20px;
   padding-bottom: 20px;
-  transition: padding-top 0.4s ease-in-out;
-  transition: padding-bottom 0.4s ease-in-out;
+  transition: padding 0.4s ease-in-out;
 }
 
 nav#mainNav.active {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background-color: rgba(215, 215, 215, 0.4) !important;
+  box-shadow: -2px 0px 6px 1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: -2px 0px 6px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: -2px 0px 6px 1px rgba(0, 0, 0, 0.4);
 }
 nav#mainNav.active .container {
   padding-top: unset;
@@ -54,6 +56,7 @@ section#certifications {
 
 /*SECTION*/
 section#home div > div.welcome {
+  animation: 1s ease 0s 1 slideInFromBottom;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -65,6 +68,52 @@ section#home div > div.welcome div {
   gap: 5px;
 }
 
+div.square {
+  width: 400px;
+  height: 400px;
+  margin-top: 200px;
+  border-radius: 120px;
+  background-color: #969696;
+  overflow: hidden;
+  position: relative;
+  transform: rotate(45deg);
+  animation: shapeDeform 15s infinite alternate ease-in-out;
+}
+div.square .picture {
+  transform: rotate(-45deg);
+  width: 600px;
+  height: 650px;
+  border: 1px red solid;
+  background-image: url(./../img/portada.jpeg);
+  background-size: cover;
+  background-position: center 100px;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: -100;
+  right: 0;
+}
+
+@keyframes shapeDeform {
+  0% {
+    background-color: #3498db; /* Azul */
+    border: 5px solid #3498db;
+  }
+  50% {
+    background-color: #ba2c5c; /* Verde */
+    border: 5px solid #ba2c5c;
+  }
+  60% {
+    background-color: #2ecc71; /* Verde */
+    border: 5px solid #2ecc71;
+  }
+  100% {
+    background-color: #e74c3c; /* Rojo */
+    border: 5px solid #e74c3c;
+  }
+}
 /*SECTION*/
 section#achievements {
   background-color: #1a2b3b;
@@ -84,27 +133,9 @@ section#portfolio {
   margin-top: -250px;
   box-sizing: border-box;
   padding-top: 100px;
-  transition: border-color 0.5s ease-in-out;
-  transition: shadow 0.5s fade;
   animation: pulseGradientGlow 6s infinite alternate ease-in-out;
 }
 
-@keyframes pulseGradientGlow {
-  0% {
-    /* Estado inicial: resplandor más sutil con tonos cian */
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 45px rgba(0, 220, 220, 0.2); /* Cian más oscuro/difuso */
-  }
-  50% {
-    /* Punto medio: resplandor más grande e intenso con tonos púrpura */
-    box-shadow: 0 0 25px rgba(128, 0, 128, 0.9), 0 0 45px rgba(160, 0, 160, 0.6), 0 0 60px rgba(192, 0, 192, 0.3); /* Púrpura para un halo extendido */
-  }
-  100% {
-    /* Vuelve al estado inicial, pero con una transición de color suave */
-    /* Combinación de cian y púrpura para el retorno gradual */
-    /* Vuelve al estado inicial para un ciclo continuo */
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 45px rgba(0, 220, 220, 0.2); /* Cian más oscuro/difuso */
-  }
-}
 /*SECTION*/
 section#certifications {
   padding-bottom: 350px;
@@ -173,10 +204,13 @@ footer div > div.info {
   overflow: hidden;
   display: grid;
   align-content: end;
+  border: 0.5px solid #798b9a;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   transition: 0.3s;
+  animation: pulseGlowAqua 5s infinite ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
 }
 .card-body:hover {
   opacity: 0.9;
@@ -419,9 +453,138 @@ footer div > div.info {
   /* Soporte para navegadores antiguos */
 }
 
+/*----------------------------------------------------------------------------------*/
+/*                      ANIMACIONES                                                 */
+/*----------------------------------------------------------------------------------*/
+/* #region MediaQueries   */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes pulseBorderColor {
+  0% {
+    border: 0.5px solid red;
+  }
+  100% {
+    border: 0.5px solid blue;
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes pulseGradientGlow {
+  0% {
+    /* Estado inicial: resplandor más sutil con tonos cian */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 45px rgba(0, 220, 220, 0.2);
+    /* Cian más oscuro/difuso */
+  }
+  50% {
+    /* Punto medio: resplandor más grande e intenso con tonos púrpura */
+    box-shadow: 0 0 25px rgba(128, 0, 128, 0.9), 0 0 45px rgba(160, 0, 160, 0.6), 0 0 60px rgba(192, 0, 192, 0.3);
+    /* Púrpura para un halo extendido */
+  }
+  100% {
+    /* Vuelve al estado inicial, pero con una transición de color suave */
+    /* Combinación de cian y púrpura para el retorno gradual */
+    /* Vuelve al estado inicial para un ciclo continuo */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 45px rgba(0, 220, 220, 0.2);
+    /* Cian más oscuro/difuso */
+  }
+}
+@keyframes pulseGradientGlowGold {
+  0% {
+    /* Estado inicial: resplandor más sutil con tonos cian */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 45px rgba(0, 220, 220, 0.2);
+    /* Cian más oscuro/difuso */
+  }
+  50% {
+    /* Punto medio: resplandor más grande e intenso con tonos púrpura */
+    box-shadow: 0 0 25px rgba(128, 0, 128, 0.9), 0 0 45px rgba(160, 0, 160, 0.6), 0 0 60px rgba(192, 0, 192, 0.3);
+    /* Púrpura para un halo extendido */
+  }
+  100% {
+    /* Vuelve al estado inicial, pero con una transición de color suave */
+    /* Combinación de cian y púrpura para el retorno gradual */
+    /* Vuelve al estado inicial para un ciclo continuo */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 45px rgba(0, 220, 220, 0.2);
+    /* Cian más oscuro/difuso */
+  }
+}
+@keyframes pulseGlowCoral {
+  0% {
+    /* Inicio: sutil */
+    box-shadow: 0 0 10px rgba(255, 112, 91, 0.3), 0 0 20px rgba(255, 112, 91, 0.15);
+  }
+  25% {
+    /* Aumenta suavemente */
+    box-shadow: 0 0 15px rgba(255, 112, 91, 0.4), 0 0 30px rgba(255, 112, 91, 0.2);
+  }
+  50% {
+    /* Máxima intensidad */
+    box-shadow: 0 0 20px rgba(255, 112, 91, 0.6), 0 0 40px rgba(255, 112, 91, 0.3);
+  }
+  75% {
+    /* Disminuye gradualmente */
+    box-shadow: 0 0 15px rgba(255, 112, 91, 0.35), 0 0 25px rgba(255, 112, 91, 0.15);
+  }
+  100% {
+    /* Vuelve al estado inicial */
+    box-shadow: 0 0 10px rgba(255, 112, 91, 0.3), 0 0 20px rgba(255, 112, 91, 0.15);
+  }
+}
+@keyframes pulseGlowAqua {
+  0% {
+    box-shadow: 0 0 10px rgba(3, 189, 149, 0.3), 0 0 20px rgba(0, 255, 195, 0.2);
+  }
+  25% {
+    box-shadow: 0 0 15px rgba(3, 189, 149, 0.4), 0 0 30px rgba(0, 255, 170, 0.25);
+  }
+  75% {
+    box-shadow: 0 0 15px rgba(3, 189, 149, 0.35), 0 0 25px rgba(0, 255, 195, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(3, 189, 149, 0.3), 0 0 20px rgba(0, 255, 195, 0.2);
+  }
+}
+@keyframes pulseGradientGlowWarm {
+  0% {
+    box-shadow: 0 0 10px rgba(234, 129, 41, 0.4), 0 0 20px rgba(234, 129, 41, 0.3), 0 0 30px rgba(234, 129, 41, 0.2);
+  }
+  25% {
+    box-shadow: 0 0 15px rgba(223, 92, 48, 0.5), 0 0 30px rgba(223, 92, 48, 0.4), 0 0 40px rgba(223, 92, 48, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(200, 60, 60, 0.6), 0 0 35px rgba(200, 60, 60, 0.5), 0 0 50px rgba(200, 60, 60, 0.4);
+  }
+  75% {
+    box-shadow: 0 0 25px rgba(186, 44, 92, 0.7), 0 0 40px rgba(186, 44, 92, 0.5), 0 0 55px rgba(186, 44, 92, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(234, 129, 41, 0.4), 0 0 20px rgba(234, 129, 41, 0.3), 0 0 30px rgba(234, 129, 41, 0.2);
+  }
+}
+/* #endregion    */
 /*==================================================
 =            Bootstrap 3 Media Queries             =
 ==================================================*/
+/* #region MediaQueries   */
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
 /* Extra Small Devices, Phones */
@@ -468,4 +631,5 @@ footer div > div.info {
   }
 }
 /* Extra Small Devices, Phones */
-/* Custom, iPhone Retina *//*# sourceMappingURL=style.css.map */
+/* Custom, iPhone Retina */
+/* #endregion *//*# sourceMappingURL=style.css.map */

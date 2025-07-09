@@ -50,9 +50,9 @@ nav#mainNav {
     /* Soporte para navegadores antiguos */
 
 
-    transition: background-color 0.9s ease; 
+    transition: background-color 0.9s ease;
     // transition: height 0.9s ease; 
-    
+
     // transition: backdrop-filter  0.9s ease-in-out; 
 
 
@@ -60,12 +60,14 @@ nav#mainNav {
         font-weight: bold;
         text-transform: uppercase;
     }
-    .container { 
+
+    .container {
 
         padding-top: 20px;
         padding-bottom: 20px;
-        transition:  padding-top 0.4s ease-in-out; 
-        transition:  padding-bottom 0.4s ease-in-out; 
+
+        transition: padding 0.4s ease-in-out;
+        // transition:  padding-top 0.4s ease-in-out; 
     }
 
 
@@ -77,6 +79,12 @@ nav#mainNav.active {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background-color: rgba(215, 215, 215, 0.4) !important;
+
+    // Shadow
+    box-shadow: -2px 0px 6px 1px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: -2px 0px 6px 1px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: -2px 0px 6px 1px rgba(0, 0, 0, 0.4);
+
     .container {
         padding-top: unset;
         padding-bottom: unset;
@@ -105,7 +113,9 @@ section#certifications {
 /*SECTION*/
 section#home {
 
+
     div>div.welcome {
+        animation: 1s ease 0s 1 slideInFromBottom;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -119,6 +129,97 @@ section#home {
         }
     }
 }
+
+div.square {
+    width: 400px;
+    height: 400px;
+    // animation: 1s ease 0s 1 slideInFromTop;
+    margin-top: 200px;
+    border-radius: 120px;
+    background-color: #969696;
+    overflow: hidden;
+    // padding: 10px;
+    // border: 10px solid red;
+    position: relative;
+    
+    .picture {
+        transform: rotate(-45deg);
+        width: 600px;
+        height: 650px;
+        
+        
+        
+
+        border: 1px red solid;
+        
+        
+        //background
+        background-image: url(./../img/portada.jpeg);
+        background-size: cover;
+        background-position: center 100px;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: -100;
+        right: 0;
+    }
+    
+
+
+
+    transform: rotate(45deg);
+    animation: shapeDeform 15s infinite alternate ease-in-out;
+
+}
+
+@keyframes shapeDeform {
+    0% {
+        // width: 400px;
+        // height: 400px;
+        background-color: #3498db; /* Azul */
+        border: 5px solid #3498db;
+    }
+        
+    // 30% {
+    //     width: 410px;
+    //     height: 380px;
+    //     background-color: #2ecc71; /* Verde */
+    //     border: 8px solid  #2ecc71;;
+    // }
+
+    
+    50% {
+        
+        background-color: #ba2c5c; /* Verde */
+        border: 5px solid  #ba2c5c;;
+    }
+    60% {
+    //     width: 410px; /* Tamaño intermedio */
+    //     height: 380px; /* Tamaño intermedio */
+        background-color: #2ecc71; /* Verde */
+        // border-radius: 100;
+        border: 5px solid  #2ecc71;
+    }
+    // 80% {
+    //     width: 390px; /* Tamaño intermedio */
+    //     height: 400px; /* Tamaño intermedio */
+    //     background-color: #2ecc71; /* Verde */
+    //     // border-radius: 100;
+    //     border: 5px solid  #2ecc71;
+    // }
+    100% {
+        // width: 370px;
+        // height: 419px;
+        background-color: #e74c3c; /* Rojo */
+        border: 5px solid  #e74c3c; 
+    }
+}
+
+
+
 
 /*SECTION*/
 section#achievements {
@@ -158,49 +259,21 @@ section#portfolio {
     // animation: colorChange 2s infinite;
 
     //Shadow
-    transition: border-color 0.5s ease-in-out;
+    // transition: border-color 0.5s ease-in-out;
     // box-shadow: -3px -8px 22px -1px red;
-    transition: shadow 0.5s fade;
+    // transition: shadow 0.5s fade;
     // animation: pulseGlow 2s infinite;
-    animation: pulseGradientGlow 6s infinite alternate ease-in-out; 
+    animation: pulseGradientGlow 6s infinite alternate ease-in-out;
 
 }
 
-@keyframes pulseGradientGlow {
-    0% {
-        /* Estado inicial: resplandor más sutil con tonos cian */
-        box-shadow: 
-            0 0 25px rgba(0, 255, 255, 0.5),   /* Cian medio (base) */
-            0 0 45px rgba(0, 220, 220, 0.2);   /* Cian más oscuro/difuso */
-    }
 
-    50% {
-        /* Punto medio: resplandor más grande e intenso con tonos púrpura */
-        box-shadow: 
-            0 0 25px rgba(128, 0, 128, 0.9),   /* Púrpura principal brillante */
-            0 0 45px rgba(160, 0, 160, 0.6),   /* Púrpura más grande y difuso */
-            0 0 60px rgba(192, 0, 192, 0.3);   /* Púrpura para un halo extendido */
-    }
-
-    100% {
-        /* Vuelve al estado inicial, pero con una transición de color suave */
-        /* Combinación de cian y púrpura para el retorno gradual */
-          /* Vuelve al estado inicial para un ciclo continuo */
-        box-shadow: 
-            0 0 25px rgba(0, 255, 255, 0.5),   /* Cian medio (base) */
-            0 0 45px rgba(0, 220, 220, 0.2);   /* Cian más oscuro/difuso */
-    }
-}
 
 /*SECTION*/
-section#certifications  {
+section#certifications {
     // border: 1px solid red;
     padding-bottom: 350px;
 }
-
-
-
-
 
 
 
@@ -283,7 +356,7 @@ footer {
 
     display: grid;
     align-content: end;
-
+    border: 0.5px solid #798b9a;
 
     // Manejar la imagen de fondo    
     background-size: cover;
@@ -291,6 +364,13 @@ footer {
     background-repeat: no-repeat;
 
     transition: 0.3s;
+    // animation: pulseGradientGlowGold 6s infinite alternate ease-in-out;
+
+    animation: pulseGlowAqua 5s infinite ease-in-out;
+    transition: box-shadow 0.5s ease-in-out;
+
+      
+
 
     &:hover {
         opacity: 0.9;
@@ -591,10 +671,6 @@ footer {
     // }
 }
 
-
-
-
-
 // Tools
 .glass-container {
     position: relative;
@@ -617,13 +693,241 @@ footer {
     }
 }
 
+/*----------------------------------------------------------------------------------*/
+/*                      ANIMACIONES                                                 */
+/*----------------------------------------------------------------------------------*/
 
+/* #region MediaQueries   */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulseBorderColor {
+    0% {
+        border: 0.5px solid red;
+    }
+
+    100% {
+        border: 0.5px solid blue;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(20%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-20%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes pulseGradientGlow {
+    0% {
+        /* Estado inicial: resplandor más sutil con tonos cian */
+        box-shadow:
+            0 0 25px rgba(0, 255, 255, 0.5),
+            /* Cian medio (base) */
+            0 0 45px rgba(0, 220, 220, 0.2);
+        /* Cian más oscuro/difuso */
+    }
+
+    50% {
+        /* Punto medio: resplandor más grande e intenso con tonos púrpura */
+        box-shadow:
+            0 0 25px rgba(128, 0, 128, 0.9),
+            /* Púrpura principal brillante */
+            0 0 45px rgba(160, 0, 160, 0.6),
+            /* Púrpura más grande y difuso */
+            0 0 60px rgba(192, 0, 192, 0.3);
+        /* Púrpura para un halo extendido */
+    }
+
+    100% {
+        /* Vuelve al estado inicial, pero con una transición de color suave */
+        /* Combinación de cian y púrpura para el retorno gradual */
+        /* Vuelve al estado inicial para un ciclo continuo */
+        box-shadow:
+            0 0 25px rgba(0, 255, 255, 0.5),
+            /* Cian medio (base) */
+            0 0 45px rgba(0, 220, 220, 0.2);
+        /* Cian más oscuro/difuso */
+    }
+}
+
+@keyframes pulseGradientGlowGold {
+    0% {
+        /* Estado inicial: resplandor más sutil con tonos cian */
+        box-shadow:
+            0 0 25px rgba(0, 255, 255, 0.5),
+            /* Cian medio (base) */
+            0 0 45px rgba(0, 220, 220, 0.2);
+        /* Cian más oscuro/difuso */
+    }
+
+    50% {
+        /* Punto medio: resplandor más grande e intenso con tonos púrpura */
+        box-shadow:
+            0 0 25px rgba(128, 0, 128, 0.9),
+            /* Púrpura principal brillante */
+            0 0 45px rgba(160, 0, 160, 0.6),
+            /* Púrpura más grande y difuso */
+            0 0 60px rgba(192, 0, 192, 0.3);
+        /* Púrpura para un halo extendido */
+    }
+
+    100% {
+        /* Vuelve al estado inicial, pero con una transición de color suave */
+        /* Combinación de cian y púrpura para el retorno gradual */
+        /* Vuelve al estado inicial para un ciclo continuo */
+        box-shadow:
+            0 0 25px rgba(0, 255, 255, 0.5),
+            /* Cian medio (base) */
+            0 0 45px rgba(0, 220, 220, 0.2);
+        /* Cian más oscuro/difuso */
+    }
+}
+
+@keyframes pulseGlowCoral {
+    0% {
+        /* Inicio: sutil */
+        box-shadow:
+            0 0 10px rgba(255, 112, 91, 0.3),
+            0 0 20px rgba(255, 112, 91, 0.15);
+    }
+
+    25% {
+        /* Aumenta suavemente */
+        box-shadow:
+            0 0 15px rgba(255, 112, 91, 0.4),
+            0 0 30px rgba(255, 112, 91, 0.2);
+    }
+
+    50% {
+        /* Máxima intensidad */
+        box-shadow:
+            0 0 20px rgba(255, 112, 91, 0.6),
+            0 0 40px rgba(255, 112, 91, 0.3);
+    }
+
+    75% {
+        /* Disminuye gradualmente */
+        box-shadow:
+            0 0 15px rgba(255, 112, 91, 0.35),
+            0 0 25px rgba(255, 112, 91, 0.15);
+    }
+
+    100% {
+        /* Vuelve al estado inicial */
+        box-shadow:
+            0 0 10px rgba(255, 112, 91, 0.3),
+            0 0 20px rgba(255, 112, 91, 0.15);
+    }
+}
+
+@keyframes pulseGlowAqua {
+    0% {
+        box-shadow:
+            0 0 10px rgba(3, 189, 149, 0.3),
+            0 0 20px rgba(0, 255, 195, 0.2);
+    }
+
+    25% {
+        box-shadow:
+            0 0 15px rgba(3, 189, 149, 0.4),
+            0 0 30px rgba(0, 255, 170, 0.25);
+    }
+
+    //   50% {
+    //     box-shadow:
+    //       0 0 20px rgba(3, 189, 149, 0.6),
+    //       0 0 40px rgba(0, 255, 229, 0.35),
+    //       0 0 50px rgba(0, 255, 170, 0.2);
+    //   }
+
+    75% {
+        box-shadow:
+            0 0 15px rgba(3, 189, 149, 0.35),
+            0 0 25px rgba(0, 255, 195, 0.2);
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px rgba(3, 189, 149, 0.3),
+            0 0 20px rgba(0, 255, 195, 0.2);
+    }
+}
+
+
+@keyframes pulseGradientGlowWarm {
+    0% {
+        box-shadow:
+            0 0 10px rgba(234, 129, 41, 0.4),
+            /* #ea8129 suave */
+            0 0 20px rgba(234, 129, 41, 0.3),
+            0 0 30px rgba(234, 129, 41, 0.2);
+    }
+
+    25% {
+        box-shadow:
+            0 0 15px rgba(223, 92, 48, 0.5),
+            /* Intermedio cálido */
+            0 0 30px rgba(223, 92, 48, 0.4),
+            0 0 40px rgba(223, 92, 48, 0.3);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px rgba(200, 60, 60, 0.6),
+            /* Más rojizo hacia el centro */
+            0 0 35px rgba(200, 60, 60, 0.5),
+            0 0 50px rgba(200, 60, 60, 0.4);
+    }
+
+    75% {
+        box-shadow:
+            0 0 25px rgba(186, 44, 92, 0.7),
+            /* #ba2c5c empieza a dominar */
+            0 0 40px rgba(186, 44, 92, 0.5),
+            0 0 55px rgba(186, 44, 92, 0.3);
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px rgba(234, 129, 41, 0.4),
+            /* Regreso a #ea8129 */
+            0 0 20px rgba(234, 129, 41, 0.3),
+            0 0 30px rgba(234, 129, 41, 0.2);
+    }
+}
+
+/* #endregion    */
 
 
 
 /*==================================================
 =            Bootstrap 3 Media Queries             =
 ==================================================*/
+
+/* #region MediaQueries   */
+
 
 
 
@@ -675,7 +979,7 @@ footer {
         }
     }
 
-    section#portfolio { 
+    section#portfolio {
 
         border-top-left-radius: 60px;
         border-top-right-radius: 60px;
@@ -713,3 +1017,6 @@ footer {
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {}
+
+
+/* #endregion */
