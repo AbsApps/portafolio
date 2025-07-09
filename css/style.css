@@ -456,6 +456,14 @@ footer div > div.info {
 /*----------------------------------------------------------------------------------*/
 /*                      ANIMACIONES                                                 */
 /*----------------------------------------------------------------------------------*/
+.slideIn--FromBottom {
+  animation: 1s ease 0s 1 slideInFromBottom;
+}
+
+.slideIn--FromTop {
+  animation: 1s ease 0s 1 slideInFromTop;
+}
+
 /* #region MediaQueries   */
 @keyframes slideInFromLeft {
   0% {
@@ -628,6 +636,15 @@ footer div > div.info {
   }
   .card-body:hover {
     height: 250px;
+  }
+  section#home div > div.welcome {
+    height: auto;
+    min-height: 450px;
+  }
+  section#home div.square {
+    width: 95%;
+    margin-top: unset;
+    margin-bottom: 150px;
   }
 }
 /* Extra Small Devices, Phones */

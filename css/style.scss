@@ -697,6 +697,15 @@ footer {
 /*                      ANIMACIONES                                                 */
 /*----------------------------------------------------------------------------------*/
 
+.slideIn--FromBottom {
+    animation: 1s ease 0s 1 slideInFromBottom;
+}
+
+.slideIn--FromTop { 
+    animation: 1s ease 0s 1 slideInFromTop;
+} 
+
+
 /* #region MediaQueries   */
 @keyframes slideInFromLeft {
     0% {
@@ -1006,6 +1015,34 @@ footer {
             height: 250px;
         }
     }
+
+
+    section#home {
+
+
+        div>div.welcome {
+            // animation: 1s ease 0s 1 slideInFromBottom;
+            // display: flex;
+            // flex-direction: row;
+            // align-items: center;
+            height: auto;
+            min-height: 450px;
+            // border-color: 1px solid red;
+            // border: 1px solid red;
+            // div {
+            //     display: flex;
+            //     flex-direction: column;
+            //     gap: 5px;
+            // }
+        }
+
+        div.square {
+            width: 95%;
+            margin-top: unset;
+            margin-bottom: 150px;
+        }
+    }
+
 
 
 
