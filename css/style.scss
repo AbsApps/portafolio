@@ -112,7 +112,7 @@ section#certifications {
 
 /*SECTION*/
 section#home {
-
+    overflow: hidden;
 
     div>div.welcome {
         animation: 1s ease 0s 1 slideInFromBottom;
@@ -239,7 +239,6 @@ section#achievements {
 }
 
 section#portfolio {
-    //   background-color: map-get($colors, "background2-color");
     background-color: #274057;
     height: 100vh;
     border-top-left-radius: 120px;
@@ -250,21 +249,11 @@ section#portfolio {
     // -moz-box-shadow: -3px -8px 22px -1px colorChange;
     box-sizing: border-box;
     padding-top: 100px;
-    // border-color: 1px solid blue;
-    // animation: colorChange 2s infinite; /* Aplica la animación */
-
-
-    // transition: border-color 0.5s fade;
-    // border: 2px solid;
-    // animation: colorChange 2s infinite;
-
-    //Shadow
-    // transition: border-color 0.5s ease-in-out;
-    // box-shadow: -3px -8px 22px -1px red;
-    // transition: shadow 0.5s fade;
-    // animation: pulseGlow 2s infinite;
+    overflow: hidden;
     animation: pulseGradientGlow 6s infinite alternate ease-in-out;
-
+    // .container {
+            
+    // }
 }
 
 

@@ -55,6 +55,9 @@ section#certifications {
 }
 
 /*SECTION*/
+section#home {
+  overflow: hidden;
+}
 section#home div > div.welcome {
   animation: 1s ease 0s 1 slideInFromBottom;
   display: flex;
@@ -133,6 +136,7 @@ section#portfolio {
   margin-top: -250px;
   box-sizing: border-box;
   padding-top: 100px;
+  overflow: hidden;
   animation: pulseGradientGlow 6s infinite alternate ease-in-out;
 }
 
