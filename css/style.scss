@@ -38,6 +38,7 @@ p {
 // }
 
 nav#mainNav {
+    // height: 80px;
     background-color: rgba(26, 43, 59, 0.5) !important;
 
     color: #ffff;
@@ -48,11 +49,40 @@ nav#mainNav {
     -webkit-backdrop-filter: blur(10px);
     /* Soporte para navegadores antiguos */
 
+
+    transition: background-color 0.9s ease; 
+    // transition: height 0.9s ease; 
+    
+    // transition: backdrop-filter  0.9s ease-in-out; 
+
+
     div>.navbar-brand {
         font-weight: bold;
         text-transform: uppercase;
     }
+    .container { 
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+        transition:  padding-top 0.4s ease-in-out; 
+        transition:  padding-bottom 0.4s ease-in-out; 
+    }
+
+
+
 }
+
+nav#mainNav.active {
+    // height: 56px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(215, 215, 215, 0.4) !important;
+    .container {
+        padding-top: unset;
+        padding-bottom: unset;
+    }
+}
+
 
 section#home,
 // section#achievements,

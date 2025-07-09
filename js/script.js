@@ -1,3 +1,4 @@
+// CARDS
 var swiper = new Swiper(".myCardsPictures", {
     effect: "cards",
     grabCursor: true,
@@ -16,7 +17,7 @@ var swiper = new Swiper(".myCardsPictures", {
 });
 
 
-
+// CERTIFICACIONES
 var swiper = new Swiper(".myCertifications", {
     slidesPerView: 3,
     spaceBetween: 30,
@@ -47,10 +48,6 @@ var swiper = new Swiper(".myCertifications", {
         },
     },
 });
-
-
-
-
 
 var myPortfolio = new Swiper(".myPortfolio", {
     slidesPerView: 3,
@@ -84,8 +81,17 @@ var myPortfolio = new Swiper(".myPortfolio", {
 });
 
 
-console.log('myCertifications')
+// console.log('myCertifications')
 
+let lastKnownScrollPosition = 0;
+document.addEventListener("scroll", (event) => {
+    lastKnownScrollPosition = window.scrollY;
+    
+    var element = document.getElementById("mainNav");
+    if (lastKnownScrollPosition == 0) {
+        element.classList.remove("active");
+    } else {        
+        element.classList.add("active");
+    }
+});
 
-// AOS INIT
-AOS.init();

@@ -17,10 +17,27 @@ nav#mainNav {
   /* Efecto borroso */
   -webkit-backdrop-filter: blur(10px);
   /* Soporte para navegadores antiguos */
+  transition: background-color 0.9s ease;
 }
 nav#mainNav div > .navbar-brand {
   font-weight: bold;
   text-transform: uppercase;
+}
+nav#mainNav .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: padding-top 0.4s ease-in-out;
+  transition: padding-bottom 0.4s ease-in-out;
+}
+
+nav#mainNav.active {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(215, 215, 215, 0.4) !important;
+}
+nav#mainNav.active .container {
+  padding-top: unset;
+  padding-bottom: unset;
 }
 
 section#home,
