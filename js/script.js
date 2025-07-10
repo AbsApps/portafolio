@@ -8,6 +8,7 @@ var lading = {};
         console.log('init landing')
         this.eventListener()
         this.initSwipperSlider()
+        this.clickNavLink()
     }
 
     this.initSwipperSlider = () => {
@@ -108,6 +109,31 @@ var lading = {};
                 element.classList.add("active");
             }
         });
+    }
+
+
+
+    this.toggleNavActive = (clickedNavBar) => {
+        var navLink = document.querySelectorAll('.nav-link')
+
+        navLink.forEach(nav => {
+            if (nav !== clickedNavBar){
+                nav.classList.remove('active')
+            }
+        })
+    }
+
+    this.clickNavLink = () => {
+
+
+        document.querySelectorAll('.nav-link').forEach(item => {
+            item.addEventListener('click', (e) => {
+                // debugger
+                this.toggleNavActive(item)
+                // console.log(item)
+                item.classList.add('active')
+            })
+        })
     }
 
     window.onload = function (e) { that.init(); }

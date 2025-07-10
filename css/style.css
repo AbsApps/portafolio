@@ -216,9 +216,9 @@ footer div > div.info {
   max-width: 370px;
   width: 100%;
   height: 250px;
+  border: 1px red solid;
   background-color: white;
   border-radius: 25px;
-  overflow: hidden;
   display: grid;
   align-content: end;
   border: 0.5px solid #798b9a;
@@ -226,8 +226,7 @@ footer div > div.info {
   background-position: center top;
   background-repeat: no-repeat;
   transition: 0.3s;
-  animation: pulseGlowAqua 5s infinite ease-in-out;
-  transition: box-shadow 0.5s ease-in-out;
+  overflow: hidden;
 }
 .card-body:hover {
   opacity: 0.9;
@@ -411,7 +410,7 @@ footer div > div.info {
   height: 250px;
   width: 250px;
   overflow: hidden;
-  border-radius: 35px;
+  border-radius: 60px;
   position: relative;
   background-color: rgba(217, 217, 217, 0.9) !important;
   color: white;
@@ -620,6 +619,9 @@ footer div > div.info {
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  section#home div > div.square {
+    height: 310px;
+  }
   section#achievements {
     padding-top: 80px;
     padding-bottom: 80px;
