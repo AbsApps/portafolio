@@ -23,6 +23,15 @@ nav#mainNav div > .navbar-brand {
   font-weight: bold;
   text-transform: uppercase;
 }
+nav#mainNav div > .navbar-nav .nav-item {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+nav#mainNav div > .navbar-nav .nav-item a {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 25px;
+}
 nav#mainNav .container {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -101,19 +110,23 @@ div.square .picture {
 
 @keyframes shapeDeform {
   0% {
-    background-color: #3498db; /* Azul */
+    background-color: #3498db;
+    /* Azul */
     border: 5px solid #3498db;
   }
   50% {
-    background-color: #ba2c5c; /* Verde */
+    background-color: #ba2c5c;
+    /* Verde */
     border: 5px solid #ba2c5c;
   }
   60% {
-    background-color: #2ecc71; /* Verde */
+    background-color: #2ecc71;
+    /* Verde */
     border: 5px solid #2ecc71;
   }
   100% {
-    background-color: #e74c3c; /* Rojo */
+    background-color: #e74c3c;
+    /* Rojo */
     border: 5px solid #e74c3c;
   }
 }
@@ -629,6 +642,19 @@ footer div > div.info {
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  nav#mainNav {
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+  }
+  nav#mainNav div > .navbar-nav .nav-item {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  nav#mainNav div > .navbar-nav .nav-item a {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 25px;
+  }
   .swiper.myCardsPictures {
     width: 65%;
     height: 230px;

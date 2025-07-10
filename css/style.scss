@@ -61,6 +61,20 @@ nav#mainNav {
         text-transform: uppercase;
     }
 
+    div>.navbar-nav {
+        .nav-item {
+            padding-bottom: 10px;
+            padding-top: 10px;
+
+            a {
+                font-size: 20px;
+                // color: red;
+                font-weight: bold;
+                padding-left: 25px;
+            }
+        }
+    }
+
     .container {
 
         padding-top: 20px;
@@ -141,18 +155,18 @@ div.square {
     // padding: 10px;
     // border: 10px solid red;
     position: relative;
-    
+
     .picture {
         transform: rotate(-45deg);
         width: 600px;
         height: 650px;
-        
-        
-        
+
+
+
 
         border: 1px red solid;
-        
-        
+
+
         //background
         background-image: url(./../img/portada.jpeg);
         background-size: cover;
@@ -166,7 +180,7 @@ div.square {
         left: -100;
         right: 0;
     }
-    
+
 
 
 
@@ -179,10 +193,11 @@ div.square {
     0% {
         // width: 400px;
         // height: 400px;
-        background-color: #3498db; /* Azul */
+        background-color: #3498db;
+        /* Azul */
         border: 5px solid #3498db;
     }
-        
+
     // 30% {
     //     width: 410px;
     //     height: 380px;
@@ -190,19 +205,24 @@ div.square {
     //     border: 8px solid  #2ecc71;;
     // }
 
-    
+
     50% {
-        
-        background-color: #ba2c5c; /* Verde */
-        border: 5px solid  #ba2c5c;;
+
+        background-color: #ba2c5c;
+        /* Verde */
+        border: 5px solid #ba2c5c;
+        ;
     }
+
     60% {
-    //     width: 410px; /* Tamaño intermedio */
-    //     height: 380px; /* Tamaño intermedio */
-        background-color: #2ecc71; /* Verde */
+        //     width: 410px; /* Tamaño intermedio */
+        //     height: 380px; /* Tamaño intermedio */
+        background-color: #2ecc71;
+        /* Verde */
         // border-radius: 100;
-        border: 5px solid  #2ecc71;
+        border: 5px solid #2ecc71;
     }
+
     // 80% {
     //     width: 390px; /* Tamaño intermedio */
     //     height: 400px; /* Tamaño intermedio */
@@ -213,8 +233,9 @@ div.square {
     100% {
         // width: 370px;
         // height: 419px;
-        background-color: #e74c3c; /* Rojo */
-        border: 5px solid  #e74c3c; 
+        background-color: #e74c3c;
+        /* Rojo */
+        border: 5px solid #e74c3c;
     }
 }
 
@@ -252,7 +273,7 @@ section#portfolio {
     overflow: hidden;
     animation: pulseGradientGlow 6s infinite alternate ease-in-out;
     // .container {
-            
+
     // }
 }
 
@@ -358,7 +379,7 @@ footer {
     animation: pulseGlowAqua 5s infinite ease-in-out;
     transition: box-shadow 0.5s ease-in-out;
 
-      
+
 
 
     &:hover {
@@ -690,9 +711,9 @@ footer {
     animation: 1s ease 0s 1 slideInFromBottom;
 }
 
-.slideIn--FromTop { 
+.slideIn--FromTop {
     animation: 1s ease 0s 1 slideInFromTop;
-} 
+}
 
 
 /* #region MediaQueries   */
@@ -988,6 +1009,49 @@ footer {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+
+    nav#mainNav {
+        backdrop-filter: blur(15px);
+        // // height: 80px;
+        // background-color: rgba(26, 43, 59, 0.1) !important;
+
+        // color: #ffff;
+        // /* Fondo semitransparente */
+        // // border-radius: 10px;
+        // backdrop-filter: blur(10px);
+        // /* Efecto borroso */
+        // -webkit-backdrop-filter: blur(10px);
+        // /* Soporte para navegadores antiguos */
+
+
+        // transition: background-color 0.9s ease;
+        // // transition: height 0.9s ease; 
+
+        // // transition: backdrop-filter  0.9s ease-in-out; 
+
+
+        // div>.navbar-brand {
+        //     font-weight: bold;
+        //     text-transform: uppercase;
+        // }
+
+        div>.navbar-nav {
+            .nav-item {
+                padding-bottom: 10px;
+                padding-top: 10px;
+
+                a {
+                    font-size: 20px;
+                    // color: red;
+                    font-weight: bold;
+                    padding-left: 25px;
+                }
+            }
+        }
+    }
+
+
+
     .swiper.myCardsPictures {
         width: 65%;
         height: 230px;
