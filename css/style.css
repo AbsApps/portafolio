@@ -644,9 +644,12 @@ footer div > div.info {
   section#home div > div.welcome {
     height: auto;
     min-height: 450px;
+    padding-bottom: 90px;
+    padding-top: 200px;
   }
   section#home div.square {
-    width: 95%;
+    width: 80%;
+    height: 350px;
     margin-top: unset;
     margin-bottom: 150px;
   }

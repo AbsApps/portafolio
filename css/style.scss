@@ -1016,6 +1016,8 @@ footer {
             // align-items: center;
             height: auto;
             min-height: 450px;
+            padding-bottom: 90px;
+            padding-top: 200px;
             // border-color: 1px solid red;
             // border: 1px solid red;
             // div {
@@ -1026,7 +1028,9 @@ footer {
         }
 
         div.square {
-            width: 95%;
+            // border: 1px solid green;
+            width: 80%;
+            height: 350px;
             margin-top: unset;
             margin-bottom: 150px;
         }
