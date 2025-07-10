@@ -29,8 +29,22 @@ nav#mainNav div > .navbar-nav .nav-item {
 }
 nav#mainNav div > .navbar-nav .nav-item a {
   font-size: 20px;
+  color: #f6f6f6;
   font-weight: bold;
-  padding-left: 25px;
+}
+nav#mainNav div > .navbar-nav .nav-item a.nav-link.active {
+  position: relative;
+}
+nav#mainNav div > .navbar-nav .nav-item a.nav-link.active::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 85%;
+  border-bottom: 4px solid #ff705b;
 }
 nav#mainNav .container {
   padding-top: 20px;
