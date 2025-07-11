@@ -165,14 +165,13 @@ section#home {
 div.square {
     width: 400px;
     height: 400px;
-    // animation: 1s ease 0s 1 slideInFromTop;
     margin-top: 200px;
     border-radius: 120px;
     background-color: #969696;
     overflow: hidden;
-    // padding: 10px;
-    // border: 10px solid red;
+    
     position: relative;
+
 
     .picture {
         transform: rotate(-45deg);
@@ -214,6 +213,9 @@ div.square {
         background-color: #3498db;
         /* Azul */
         border: 5px solid #3498db;
+            box-shadow: -2px 7px 24px -6px #3498db;
+        -webkit-box-shadow: -2px 7px 24px -6px #3498db;
+        -moz-box-shadow: -2px 7px 24px -6px #3498db;
     }
 
     // 30% {
@@ -229,7 +231,9 @@ div.square {
         background-color: #ba2c5c;
         /* Verde */
         border: 5px solid #ba2c5c;
-        ;
+               box-shadow: -2px 7px 24px -6px #ba2c5c;
+        -webkit-box-shadow: -2px 7px 24px -6px #ba2c5c;
+        -moz-box-shadow: -2px 7px 24px -6px #ba2c5c;
     }
 
     60% {
@@ -239,6 +243,9 @@ div.square {
         /* Verde */
         // border-radius: 100;
         border: 5px solid #2ecc71;
+                       box-shadow: -2px 7px 24px -6px #2ecc71;
+        -webkit-box-shadow: -2px 7px 24px -6px #2ecc71;
+        -moz-box-shadow: -2px 7px 24px -6px #2ecc71;
     }
 
     // 80% {
@@ -254,6 +261,10 @@ div.square {
         background-color: #e74c3c;
         /* Rojo */
         border: 5px solid #e74c3c;
+
+        box-shadow: -2px 7px 24px -6px #e74c3c;
+        -webkit-box-shadow: -2px 7px 24px -6px #e74c3c;
+        -moz-box-shadow: -2px 7px 24px -6px #e74c3c;
     }
 }
 
