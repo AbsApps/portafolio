@@ -64,36 +64,36 @@ var lading = {};
         });
 
         //Portfolio
-        // var myPortfolio = new Swiper(".myPortfolio", {
-        //     slidesPerView: 3,
-        //     spaceBetween: 30,
-        //     pagination: {
-        //         el: ".swiper-pagination",
-        //         clickable: true,
-        //     },
-        //     // autoplay: {
-        //     //     delay: 3500,
-        //     //     disableOnInteraction: false,
-        //     // },
-        //     breakpoints: {
-        //         340: {
-        //             slidesPerView: 1,
-        //             spaceBetween: 10,
-        //         },
-        //         640: {
-        //             slidesPerView: 2,
-        //             spaceBetween: 25,
-        //         },
-        //         768: {
-        //             slidesPerView: 2,
-        //             spaceBetween: 30,
-        //         },
-        //         1024: {
-        //             slidesPerView: 2,
-        //             spaceBetween: 10,
-        //         },
-        //     },
-        // });
+        var myPortfolio = new Swiper(".myPortfolio", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            // autoplay: {
+            //     delay: 3500,
+            //     disableOnInteraction: false,
+            // },
+            breakpoints: {
+                340: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 25,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+            },
+        });
 
     }
 
